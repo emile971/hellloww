@@ -15,6 +15,8 @@ bot.on("ready", () => {
 });
 
 bot.on('message', msg =>{
+     var parameters = splited_message.slice(1)
+     
   if(msg.content === "a!say")
   msg.delete();
 if(!msg.author.id === "481469054868258836") return msg.channel.sendMessage("Vous ne pouvez pas faire cette commande")
