@@ -16,26 +16,7 @@ bot.on("ready", () => {
 
 bot.on('message', msg =>{
     
-    var splited_message = msg.content.slice(prefix.length).split(" ");
-    var command = splited_message[0];
-     var parameters = splited_message.slice(1)
-     
-  if(msg.content === "a!say")
-  msg.delete();
-if(!msg.author.id === "481469054868258836") return msg.channel.sendMessage("Vous ne pouvez pas faire cette commande")
-  var toRepeat = parameters.join(" ");
-                if (toRepeat === "") {
-                    return msg.channel.send("? **Utilisation:** "+prefix+"say <message>")
-                };
-                toRepeat = toRepeat .replace("@everyone", "@??everyone")
-                  .replace("@here", "@??here");
  
-                  var embed = new Discord.RichEmbed()
- 
-                  .setAuthor(bot.user.username, bot.user.avatarURL)    
-                  .setDescription(toRepeat)
-                  .setColor("RANDOM");
-     msg.channel.send(embed);
      
 
 });
