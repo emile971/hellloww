@@ -11,12 +11,13 @@ bot.on('ready', () => {
  
 bot.on("ready", () => {
  
-  bot.user.setGame(`a!help | Tohru Army`);
+  bot.user.setGame(`Bot en DEV | Tohru Army`);
 });
 
 bot.on(message, message =>{
   if(message.content === "a!say")
   message.delete();
+if(!message.author.id === "481469054868258836") return message.channel.sendMessage("Vous ne pouvez pas faire cette commande")
   var toRepeat = parameters.join(" ");
                 if (toRepeat === "") {
                     return message.channel.send("? **Utilisation:** "+prefix+"say <message>")
@@ -33,4 +34,4 @@ bot.on(message, message =>{
 
 });
 
-bot.login('NDk5NTg1MDM0NjQzMTc3NDcy.Dp-abQ.qIolys4ksGw7Qv_3dESIjTda-bU')
+bot.login(process.env.TOKEN)
