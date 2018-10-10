@@ -14,7 +14,7 @@ bot.on("ready", () => {
   bot.user.setGame(`Bot en DEV | Tohru Army`);
 });
 
-bot.on('message', msg =>{
+bot.on('message', message =>{
   
   if(message.content === "a!say")
   message.delete();
