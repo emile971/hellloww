@@ -35,7 +35,7 @@ if(!msg.author.id === "481469054868258836") return msg.channel.sendMessage("Vous
                   .setAuthor(bot.user.username, bot.user.avatarURL)    
                   .setDescription(toRepeat)
                   .setColor("RANDOM");
-     message.channel.send(embed);
+     msg.channel.send(embed);
      
 
 });
