@@ -15,6 +15,9 @@ bot.on("ready", () => {
 });
 
 bot.on('message', msg =>{
+    
+    var splited_message = message.content.slice(prefix.length).split(" ");
+    var command = splited_message[0];
      var parameters = splited_message.slice(1)
      
   if(msg.content === "a!say")
