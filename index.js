@@ -14,7 +14,7 @@ bot.on("ready", () => {
   bot.user.setGame(`Bot en DEV | Tohru Army`);
 });
 
-bot.on(message, msg =>{
+bot.on('message', msg =>{
   if(msg.content === "a!say")
   msg.delete();
 if(!msg.author.id === "481469054868258836") return msg.channel.sendMessage("Vous ne pouvez pas faire cette commande")
