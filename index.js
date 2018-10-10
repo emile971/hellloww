@@ -15,27 +15,7 @@ bot.on("ready", () => {
 });
 
 bot.on('message', message =>{
-  var splited_message = message.content.slice(prefix.length).split(" ");
-  var parameters = splited_message.slice(1)
-  
-  if(message.content === "a!say")
-  message.delete();
-  var toRepeat = parameters.join(" ");
-                if (toRepeat === "") {
-                    return message.channel.send("? **Utilisation:** "+prefix+"say <message>");
-                };
-                toRepeat = toRepeat .replace("@everyone", "@??everyone")
-                  .replace("@here", "@??here");
- 
-                  var embed = new Discord.RichEmbed()
- 
-                  .setAuthor(bot.user.username, bot.user.avatarURL)    
-                  .setDescription(toRepeat)
-                  .setColor("RANDOM");
-     message.channel.send(embed);
-    
- 
-     
+
 
 });
 
