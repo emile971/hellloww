@@ -22,7 +22,7 @@ bot.on('message', message =>{
   message.delete();
   var toRepeat = parameters.join(" ");
                 if (toRepeat === "") {
-                    return message.channel.send("? **Utilisation:** "+prefix+"say <message>")
+                    return message.channel.send("? **Utilisation:** "+prefix+"say <message>");
                 };
                 toRepeat = toRepeat .replace("@everyone", "@??everyone")
                   .replace("@here", "@??here");
