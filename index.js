@@ -15,6 +15,8 @@ bot.on("ready", () => {
 });
 
 bot.on('message', message =>{
+  var splited_message = message.content.slice(prefix.length).split(" ");
+  var parameters = splited_message.slice(1)
   
   if(message.content === "a!say")
   message.delete();
