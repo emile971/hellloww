@@ -15,6 +15,24 @@ bot.on("ready", () => {
 });
 
 bot.on('message', msg =>{
+  
+  if(message.content === "a!say")
+  message.delete();
+  if(!message.member.hasPermission("ADMINISTRATOR"))
+  return message.channel.sendMessage("Vous n'avez pas la permission")
+  var toRepeat = parameters.join(" ");
+                if (toRepeat === "") {
+                    return message.channel.send("? **Utilisation:** "+prefix+"say <message>")
+                };
+                toRepeat = toRepeat .replace("@everyone", "@??everyone")
+                  .replace("@here", "@??here");
+ 
+                  var embed = new Discord.RichEmbed()
+ 
+                  .setAuthor(bot.user.username, bot.user.avatarURL)    
+                  .setDescription(toRepeat)
+                  .setColor("RANDOM");
+     message.channel.send(embed);
     
  
      
