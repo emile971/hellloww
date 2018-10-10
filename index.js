@@ -14,13 +14,13 @@ bot.on("ready", () => {
   bot.user.setGame(`Bot en DEV | Tohru Army`);
 });
 
-bot.on(message, message =>{
-  if(message.content === "a!say")
-  message.delete();
-if(!message.author.id === "481469054868258836") return message.channel.sendMessage("Vous ne pouvez pas faire cette commande")
+bot.on(message, msg =>{
+  if(msg.content === "a!say")
+  msg.delete();
+if(!msg.author.id === "481469054868258836") return msg.channel.sendMessage("Vous ne pouvez pas faire cette commande")
   var toRepeat = parameters.join(" ");
                 if (toRepeat === "") {
-                    return message.channel.send("? **Utilisation:** "+prefix+"say <message>")
+                    return msg.channel.send("? **Utilisation:** "+prefix+"say <message>")
                 };
                 toRepeat = toRepeat .replace("@everyone", "@??everyone")
                   .replace("@here", "@??here");
@@ -30,6 +30,7 @@ if(!message.author.id === "481469054868258836") return message.channel.sendMessa
                   .setAuthor(bot.user.username, bot.user.avatarURL)    
                   .setDescription(toRepeat)
                   .setColor("RANDOM");
+     message.channel.send(embed);
      
 
 });
