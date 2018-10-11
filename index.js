@@ -16,7 +16,7 @@ bot.on("ready", () => {
 
 bot.on('message', message =>{
   
-  if (msg.content === '_help'){
+  if (message.content === '_help'){
  
     let sicon = bot.user.displayAvatarURL;
       var help_embed = new Discord.RichEmbed()
@@ -28,7 +28,7 @@ bot.on('message', message =>{
       .addField("say","**COMMANDE M**", true)
           .setColor("#320242")
           .setFooter("Developper par Tohru & Emile || CORPORATION 2018")
-          msg.author.sendEmbed(help_embed).catch(console.error);
+          message.author.sendEmbed(help_embed).catch(console.error);
 
   }
 
