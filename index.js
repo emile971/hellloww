@@ -1,6 +1,7 @@
 var Discord = require("discord.js");
 bot = new Discord.Client();
 client = new Discord.Client();
+const config = require("./config.json");
 var prefix = ("a!");
 bot.on('ready', () => {
     console.log("Correctement connecter!");
