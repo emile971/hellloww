@@ -17,7 +17,7 @@ bot.on("ready", () => {
 
 bot.on('message', message =>{
   
-  if (message.content === '_help'){
+  if (message.content === 'a!help'){
  
     let sicon = bot.user.displayAvatarURL;
       var help_embed = new Discord.RichEmbed()
