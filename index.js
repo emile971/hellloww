@@ -12,7 +12,7 @@ bot.on('ready', () => {
  
 bot.on("ready", () => {
  
-  bot.user.setGame(`Bot en DEV | Tohru Army`);
+  bot.user.setGame(`GO voter GIEV => DiscordNITRO => Salon avenir-serveur`);
 });
 
 bot.on('message', message =>{
